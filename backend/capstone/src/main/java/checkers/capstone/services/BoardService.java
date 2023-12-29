@@ -26,7 +26,7 @@ public class BoardService {
         return repo.findById(id).get();
     }
 
-    public BaseRules getRulesById(long id){
+    public synchronized BaseRules getRulesById(long id){
         if (ruleMap.containsKey(id))
             return ruleMap.get(id);
 
