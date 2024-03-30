@@ -1,24 +1,33 @@
 package checkers.capstone.dtos;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/**The dto for creating a move in checkers. */
 public class MoveDTO {
 
-    private final short[] column;
-    private final short[] row;
+    @JsonProperty("columns")
+    private final short[] columns;
+    @JsonProperty("rows")
+    private final short[] rows;
 
-    public MoveDTO(short[] column, short[] row) {
-        this.column = column;
-        this.row = row;
+    /**
+     * @param columns Matching column for each change.
+     * @param rows Matching row for each change.
+     */
+    public MoveDTO(short[] columns, short[] rows) {
+        this.columns = columns;
+        this.rows = rows;
     }
 
-    public short getColumn(short i){
-        return column[i];
+    public short getColumns(short i){
+        return columns[i];
     }
 
-    public short getRow(short i){
-        return row[i];
+    public short getRows(short i){
+        return (short)(rows[i]/2);
     }
 
     public short getLength(){
-        return (short)column.length;
+        return (short)columns.length;
     }
 }

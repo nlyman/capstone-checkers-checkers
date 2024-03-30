@@ -2,8 +2,10 @@ package checkers.capstone.models;
 
 import checkers.capstone.game.rules.ChangeSpace;
 import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 
+@Entity
 public class MoveModel extends BaseModel{
 
     @ManyToOne

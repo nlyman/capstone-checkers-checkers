@@ -128,11 +128,21 @@ public class Board {
     }
 
     public void setSpace(short column, short row, Space space){
-        getRow(row).setSpace(column, space);
+        getRow(column).setSpace(row, space);
     }
 
-    public void addMove(ChangeSpace[] changes){
-        for(ChangeSpace change : changes)
-            setSpace(change.column, change.row, change.current);
+    public void addChanges(ChangeSpace[] changes){
+        for(ChangeSpace change : changes){
+            setSpace(change.column, change.row, change.current);}
+    }
+
+    public void removeChanges(ChangeSpace[] changes){
+        //This goes over the changes in reverse order since some can overwrite others.
+        for(short i=(short)(changes.length-1); i>=0; i--){
+            if (changes[i]==null){
+                continue;
+            }
+            setSpace(changes[i].column, changes[i].row, changes[i].previous);
+        }
     }
 }

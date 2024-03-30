@@ -8,6 +8,14 @@
 -0-1-2-3
 0-1-2-3-
 
+01234567
+-0-1-2-3
+0-1-2-3-
+01-0
+23-1
+45-2
+67-3
+
 number adjustment for row
 column means y position you are currently at from top to bottom.
 move left -(column%2)

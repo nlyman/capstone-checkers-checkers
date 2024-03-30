@@ -1,0 +1,58 @@
+.checkers {
+  border: 1px solid #000;
+  width: min(50vw, 50vh);
+  height: min(50vw, 50vh);
+  border-collapse: collapse;
+}
+
+td{
+  display: table-cell;
+  border: 1px solid #000;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td.viable {
+  background-color: lightblue;
+}
+
+td.nonviable {
+  background-color: whitesmoke;
+}
+
+td.highlighted {
+  background-color: burlywood;
+}
+
+div.red{
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background-color: red;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+div.black{
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background-color: black;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+div.king {
+  box-shadow: 0 0 0 4px burlywood inset;
+}
+
+html, body {
+    background-color: lightblue;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
